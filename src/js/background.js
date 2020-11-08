@@ -12,6 +12,8 @@ chrome.contextMenus.create({
         console.log("画像を取得：" + info.srcUrl);
         
         console.log("画像を取得：" + info.linkUrl);
+
+        chrome.downloads.download({url:info.srcUrl});
         //var url = info.pageUrl;
         //var host = url.replace(/https?:\/\/([^\/]+).*/, "$1");
         /*var tree = host.split(".");
